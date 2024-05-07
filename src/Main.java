@@ -34,6 +34,9 @@ public class Main {
                 System.out.print("Enter goal word: ");
                 goalWord = scanner.nextLine();
                 System.out.println();
+                // Make startWord and goalWord be lowercase
+                startWord = startWord.toLowerCase(Locale.ROOT);
+                goalWord = goalWord.toLowerCase(Locale.ROOT);
                 if (dictionary.contains(startWord) && dictionary.contains(goalWord)) {
                     break;
                 }
@@ -48,6 +51,7 @@ public class Main {
                     System.out.println("Goal word is not in the dictionary.");
                 }
             }
+
     
             int algorithm = 0;
             while (algorithm < 1 || algorithm > 3) {
